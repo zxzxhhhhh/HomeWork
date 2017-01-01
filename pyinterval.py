@@ -1,6 +1,6 @@
 from interval import interval, inf, imath
 import numpy as np
-
+import theano.tensor as T
 np.random.seed(9999)
 
 #>>> interval[1, 2]
@@ -97,4 +97,9 @@ b = np.asarray(range(4)).reshape(2,1,2)
 f([1,2], [3,4])
 
 
+x = T.tensor3()
+xshape = T.shape(x)
+for i in T.arange(xshape[0]):
+	print i
+f = theano.function([x],[])
 	
