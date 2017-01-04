@@ -9,8 +9,8 @@ layer {
   top: "data"
   input_param {
     shape {
-      dim: 1
-      dim: 5
+      dim: 2
+      dim: 3
       dim: 2
     }
   }
@@ -22,7 +22,7 @@ layer {
   bottom: "data"
   top: "out"
  inner_product_param {
-    num_output: 5
+    num_output: 2
     weight_filler {
       type: "constant"
     }
